@@ -1,0 +1,728 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'Druk';
+  src: url('./FontsFree-Net-Druk-Wide-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+  background: linear-gradient(180deg, 
+  #2D1E4E 0%, 
+  #4A5D93 25%, 
+  #8A75B7 55%, 
+  #F2A97E 100%
+);
+
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Druk", sans-serif;
+}
+
+#app, main {
+  height: 100%;
+  width: inherit;
+  font-family: "Druk", sans-serif;
+
+}
+
+/* New Website */
+
+.main-page-nav{
+  width: 100%;
+  height: 100px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page-nav-container{
+  width: 65%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page-nav-container > div:first-child{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page-nav-container > div:first-child img{
+  width: 100%;
+}
+
+.main-page-nav-container > div:first-child h3{
+  margin-left: 1rem;
+  text-transform: uppercase;
+  color:white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.main-page-nav-container > div:nth-child(2){
+  width: 75%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main-page-nav-container > div:nth-child(2) button{
+  width: 15%;
+  height: 50%;
+  background:none;
+  border:none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color:white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main-page-nav-container > div:nth-child(2) button:hover{
+  color:#F2A97E;
+}
+
+.active{
+  color:#F2A97E !important;
+}
+
+/* Home Page */
+.home-frame{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.slider-text{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.slider-text h2{
+  text-transform: uppercase;
+  font-size: 55px;
+  color:#F2A97E;
+  text-align: left;
+  width: 100%;
+  font-weight: 600;
+  margin-top: -1rem;
+}
+
+.slider-text h2 span{
+  color:white;
+}
+
+.slider-text p{
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.slider-text button{
+  width: 150px;
+  height: 50px;
+  background:#F2A97E;
+  border-radius: 5px;
+  border:none;
+  font-size: 20px;
+  font-weight: 600;
+  color:white;
+  cursor: pointer;
+}
+
+.slider-text button:hover{
+  background:white;
+  color:#F2A97E;
+}
+
+.slider-image{
+  width: 50%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blankspacediv{
+  height: 100px;
+  width: 100%;
+}
+
+.home-title{
+  width: 100%;
+  height: 100px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-title h2{
+  width: 65%;
+  height: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 55px;
+  color: white;
+}
+
+.casino-brand-home{
+  width: 100%;
+  height: 80%;
+}
+
+.casino-brand-home-span{
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+}
+
+
+.home-show-brand{
+  width: 100%;
+  height:500px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-show-brand-content{
+  width: 65%;
+  height:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-show-brand-content > div:first-child{
+  width: 50%;
+  height: 100%;
+}
+
+.home-show-brand-content > div:nth-child(2){
+  width: 50%;
+  height: 100%;
+}
+
+.home-show-brand-content > div:first-child  img{
+  height: 10%;
+}
+
+.home-show-brand-content > div:first-child  p{
+  color: white;
+  height: 65%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.home-show-brand-content > div:first-child button{
+  width: 150px;
+  height: 50px;
+  background:#F2A97E;
+  border-radius:5px;
+  border:none;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 1%;
+}
+
+.home-show-brand-content > div:first-child button:hover{
+  background:white;
+  color:#F2A97E;
+}
+
+/* Offers CSS */
+.offers-frame{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.offers-container {
+  width: 65%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 per row */
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.offers-card {
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 450px;
+  border:2px solid #F2A97E;
+}
+
+.offers-card-top{
+  width: 100%;
+  height: 65%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Apply the blur effect */
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Content stays above the blurred background */
+}
+
+.content img{
+  width: 60%;
+}
+
+
+.offers-card-bottom{
+  width: 100%;
+  height: 35%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(180deg, 
+  #8A75B7 50%, 
+  #F2A97E 100%
+  );
+  border-top: 2px solid #F2A97E;
+}
+
+.offers-card-bottom p{
+  width: 90%;
+  height: 65%;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 13px;
+}
+
+
+.offers-card-bottom div{
+  width: 100%;
+  height: 35%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offers-card-bottom div button{
+  background:transparent;
+  font-size: 20px;
+  font-weight: 600;
+  border:none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0px;
+  width:50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-top: 2px solid #F2A97E;
+}
+
+.offers-card-bottom div button:nth-child(1){
+  border-bottom-left-radius: 12px;
+  border-right: 2px solid #F2A97E;
+}
+
+.offers-card-bottom div button:nth-child(2){
+  border-bottom-right-radius: 12px;
+}
+
+.offers-card-bottom div button:hover{
+  background:#F2A97E;
+}
+
+.offers-card-bottom div button svg{
+  margin-right: 5px;
+}
+
+
+.offers-title{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.offers-title h2{
+  text-align: left;
+  font-size: 55px;
+}
+
+.offers-title p{
+  text-align: center;
+  margin-top: -0.5rem;
+  font-size: 16px;
+}
+
+#special-colored-span{
+  color:#F2A97E;
+}
+
+
+/* Offer */
+
+.offer-frame{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.offer-container {
+  width: 65%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.offer-header{
+  width: 100%;
+  height: 600px;
+  margin-top: 5%;
+  border-radius: 5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-header-left{
+  width: 35%;
+  height: 100%;
+  display:flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.offer-header-right{
+  width: 65%;
+  height: 100%;
+}
+
+.offer-header-left button{
+  width: 200px;
+  background: transparent;
+  border:none;
+  font-size: 15px;
+  color:white;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+  height: 10%;
+}
+
+.offer-header-left button:hover{
+  color:#F2A97E;
+}
+
+.offer-header-left img{
+  width: 200px;
+  height: 15%;
+}
+
+.offer-header-left p {
+  height: 65%;
+  font-size: 13px;
+  color: white;
+}
+
+#offer-button{
+  background:#F2A97E;
+  color:#fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 1s background;
+  text-transform: uppercase;
+}
+
+#offer-button svg{
+  margin-right: 5px;
+}
+
+#offer-button:hover{
+  background:#fff;
+  color:#F2A97E;
+}
+
+.offer-content{
+  width: 100%;
+  height: 1000px;
+  border-radius: 5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.offer-content-left{
+  width: 50%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 2%;
+}
+
+.offer-content-left img{
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  margin-bottom: 1rem;
+}
+
+.offer-content-right{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.offer-content-right div{
+  margin-bottom: 7%;
+}
+
+.offer-content-right div h2{
+  color:white;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.offer-content-right div p{
+  color:white;
+}
+
+/* Minesweeper CSS */
+
+
+
+/* News */
+.faq-div{
+  width: 65%;
+  height: auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.faq-div div{
+  margin-bottom: 1rem;
+}
+
+.p-panel{
+  width: 60% !important;
+  border:none !important;
+}
+
+.p-panel-header{
+  background: #F2A97E !important;
+}
+
+/* Store */
+
+.store-container {
+  width: 65%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 per row */
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.store-card {
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 450px;
+  border:2px solid #F2A97E;
+}
+
+.store-card-top{
+  width: 100%;
+  height: 65%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.store-card-top .blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Apply the blur effect */
+  z-index: -1; /* Ensure it stays behind the content */
+  background: linear-gradient(180deg, 
+  #2D1E4E 0%, 
+  #4A5D93 25%, 
+  #8A75B7 55%, 
+  #F2A97E 100%
+  );
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Content stays above the blurred background */
+}
+
+.content img{
+  width: 80%;
+}
+
+
+.store-card-bottom{
+  width: 100%;
+  height: 35%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(180deg, 
+  #8A75B7 50%, 
+  #F2A97E 100%
+  );
+  border-top: 2px solid #F2A97E;
+}
+
+.store-card-bottom p{
+  width: 100%;
+  height: 50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-bottom: 1px solid #F2A97E;
+}
+
+
+.store-card-bottom div{
+  width: 100%;
+  height: 50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-card-bottom div button{
+  background:transparent;
+  font-size: 20px;
+  font-weight: 600;
+  border:none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0px;
+  width:50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  border-top: 2px solid #F2A97E;
+}
+
+.store-card-bottom div button:nth-child(1){
+  border-bottom-left-radius: 12px;
+  border-right: 2px solid #F2A97E;
+}
+
+.store-card-bottom div button:nth-child(2){
+  border-bottom-right-radius: 12px;
+}
+
+.store-card-bottom div button:hover{
+  background:#F2A97E;
+}
+
+.store-card-bottom div button svg{
+  margin-right: 5px;
+}
