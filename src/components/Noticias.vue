@@ -9,7 +9,43 @@
 <script>
 
 export default {
-}
+  data() {
+    return {
+      articles: [],
+      lastUpdated: '',
+      loading: false,
+      error: null,
+    };
+  },
+  mounted() {
+    this.fetchNews();
+    // Poll every 10 minutes to check for updates
+    this.interval = setInterval(this.fetchNews, 10 * 60 * 1000);
+  },
+  beforeDestroy() {
+    clearInterval(this.interval);
+  },
+  methods: {
+    async fetchNews() {
+      this.loading = true;
+      try {
+        const response = await fetch('/news.json');
+        if (!response.ok) throw new Error('Failed to fetch news');
+        const data = await response.json();
+        this.articles = data.articles;
+        this.lastUpdated = new Date(data.lastUpdated).toLocaleString();
+        this.error = null;
+      } catch (err) {
+        this.error = 'Error loading news. Please try again later.';
+        console.error(err);
+      } finally {
+        this.loading = false;
+        console.log('News fetched at:', this.lastUpdated);
+        console.log('Articles:', this.articles);
+      }
+    },
+  },
+};
 </script>
 <style lang="">
     
