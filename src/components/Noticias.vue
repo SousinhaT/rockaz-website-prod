@@ -4,7 +4,7 @@
             <h2>Noticias<span id="special-colored-span">.</span></h2>
             <p>Descobre as <span id="special-colored-span">parcerias do canal</span> e as <span id="special-colored-span">vantagens exclusivas</span> que trazem para ti!<br>Fica atento para não perderes as <span id="special-colored-span">novidades</span> e <span id="special-colored-span">ofertas especiais!</span></p>
         </div>
-        <div class="container-news" ref="newsContainer">
+        <div class="container-news" ref="newsContainer" v-if="!loading">
           <div class="card-title-news">
             <h2>Notícias</h2>
           </div>
@@ -43,11 +43,6 @@ export default {
       error: null,
     };
   },
-  beforeDestroy() {
-    if (this._onWheel && this.$refs.newsContainer) {
-      this.$refs.newsContainer.removeEventListener('wheel', this._onWheel);
-    }
-  },
   mounted() {
     this.fetchNews();
     // Poll every 10 minutes to check for updates
@@ -63,6 +58,9 @@ export default {
   },
   beforeDestroy() {
     clearInterval(this.interval);
+    if (this._onWheel && this.$refs.newsContainer) {
+      this.$refs.newsContainer.removeEventListener('wheel', this._onWheel);
+    }
   },
   methods: {
     async fetchNews() {

@@ -55,11 +55,12 @@
                                     METODOS
                                 </div >
                                 <div id="widget-offer-bottom">
-                                    MBWAY
+                                    <img v-for = "method in brand.paymentMethods" :src="method.url" style="width:30px;height:30px; margin-right:1%"/>
                                 </div>
                             </div>                          
                         </div>
                     </div>
+                    <span>+18 | T&C APPLY</span>
                     <div id="btn-offers-div">
                         <button @click="seeBrandDeal(brand.name)"><i class="fa-solid fa-eye"></i> Saber +</button>
                         <button @click="gotoBrand(brand.link)"><i class="fa-solid fa-computer"></i> Ver Parceria</button>
@@ -82,7 +83,12 @@ export default {
                     name: "Spinsala",
                     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur libero in lectus eleifend vestibulum. Duis id turpis vitae neque aliquam ornare sit amet sit amet dolor. Mauris vitae iaculis dui. Duis aliquet ligula vel sem imperdiet, et mollis ligula pellentesque. Morbi pulvinar dui at lacus pretium, ultrices efficitur ante convallis. Sed non lorem vel velit ullamcorper vulputate sed non diam. Etiam in ullamcorper est. Nullam ultricies leo augue, nec semper dui condimentum sed. Nunc eleifend neque nec orci suscipit placerat.Nulla facilisi. Vivamus sodales, est sit amet interdum consectetur, velit nulla laoreet velit, nec dictum diam risus ac tortor. Suspendisse et dignissim ante, vitae tristique velit. Integer mattis ornare tellus sed pellentesque. Quisque quis nunc a lorem ornare mattis eget in nibh. Pellentesque accumsan pretium sodales. Etiam condimentum vel mauris nec pellentesque. Praesent id elit scelerisque, finibus felis ut, sagittis dolor. Sed vitae mattis risus. Suspendisse sodales quis turpis sit amet lobortis.",
                     link: "https://spinsala.com/en/",
-                    tag: "NEW"
+                    tag: "NEW",
+                    paymentMethods: [
+                        {url:"https://i.imgur.com/rfVhOdu.png"},
+                        {url:"https://i.imgur.com/i323H0N.png"},
+                        {url:"https://i.imgur.com/IcLJpQJ.png"}
+                    ]
                 },
             ]
         }
