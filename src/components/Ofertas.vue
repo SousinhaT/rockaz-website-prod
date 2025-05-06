@@ -11,6 +11,7 @@
                     <div class="content">
                         <img :src="brand.brandLogo" alt="Content Image" />
                     </div>
+                    <span id="offer-tag" v-if="brand.tag != 'none'">{{brand.tag}}</span>
                 </div>
                 <div class="offers-card-bottom">
                     <div id="widget-offers-div">
@@ -60,7 +61,7 @@
                         </div>
                     </div>
                     <div id="btn-offers-div">
-                        <!-- <button @click="seeBrandDeal(brand.name)"><i class="fa-solid fa-eye"></i> Saber +</button> -->
+                        <button @click="seeBrandDeal(brand.name)"><i class="fa-solid fa-eye"></i> Saber +</button>
                         <button @click="gotoBrand(brand.link)"><i class="fa-solid fa-computer"></i> Ver Parceria</button>
                     </div>
                     
@@ -80,11 +81,13 @@ export default {
                     backgroundURL:"https://i.imgur.com/0NT4Ac5.jpeg",
                     name: "Spinsala",
                     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur libero in lectus eleifend vestibulum. Duis id turpis vitae neque aliquam ornare sit amet sit amet dolor. Mauris vitae iaculis dui. Duis aliquet ligula vel sem imperdiet, et mollis ligula pellentesque. Morbi pulvinar dui at lacus pretium, ultrices efficitur ante convallis. Sed non lorem vel velit ullamcorper vulputate sed non diam. Etiam in ullamcorper est. Nullam ultricies leo augue, nec semper dui condimentum sed. Nunc eleifend neque nec orci suscipit placerat.Nulla facilisi. Vivamus sodales, est sit amet interdum consectetur, velit nulla laoreet velit, nec dictum diam risus ac tortor. Suspendisse et dignissim ante, vitae tristique velit. Integer mattis ornare tellus sed pellentesque. Quisque quis nunc a lorem ornare mattis eget in nibh. Pellentesque accumsan pretium sodales. Etiam condimentum vel mauris nec pellentesque. Praesent id elit scelerisque, finibus felis ut, sagittis dolor. Sed vitae mattis risus. Suspendisse sodales quis turpis sit amet lobortis.",
-                    link: "https://spinsala.com/en/"
+                    link: "https://spinsala.com/en/",
+                    tag: "NEW"
                 },
             ]
         }
     },
+
     methods: {
         seeBrandDeal(route){
             this.$router.push({ path: `/Ofertas/${route}` });
