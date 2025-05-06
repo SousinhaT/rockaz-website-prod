@@ -13,9 +13,54 @@
                     </div>
                 </div>
                 <div class="offers-card-bottom">
-                    <p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
-                    <div>
-                        <button @click="seeBrandDeal(brand.name)"><i class="fa-solid fa-eye"></i> Saber +</button>
+                    <div id="widget-offers-div">
+                        <div style="margin-bottom: 2%">
+                            <div id="widget-offer">
+                                <div id="widget-offer-top">
+                                    MIN. DEP.
+                                </div >
+                                <div id="widget-offer-bottom">
+                                    20€
+                                </div>
+                            </div>
+                            <div id="widget-offer">
+                                <div id="widget-offer-top">
+                                    BONUS
+                                </div >
+                                <div id="widget-offer-bottom">
+                                    150%
+                                </div>
+                            </div>
+                            <div id="widget-offer">
+                                <div id="widget-offer-top">
+                                    CODE
+                                </div >
+                                <div id="widget-offer-bottom">
+                                    BUTADINE
+                                </div>
+                            </div>                          
+                        </div>
+                        <div>
+                            <div id="widget-offer">
+                                <div id="widget-offer-top">
+                                    FREE SPINS
+                                </div >
+                                <div id="widget-offer-bottom">
+                                    150 FS
+                                </div>
+                            </div>                          
+                            <div id="widget-offer">
+                                <div id="widget-offer-top">
+                                    METODOS
+                                </div >
+                                <div id="widget-offer-bottom">
+                                    MBWAY
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                    <div id="btn-offers-div">
+                        <!-- <button @click="seeBrandDeal(brand.name)"><i class="fa-solid fa-eye"></i> Saber +</button> -->
                         <button @click="gotoBrand(brand.link)"><i class="fa-solid fa-computer"></i> Ver Parceria</button>
                     </div>
                     

@@ -1,19 +1,26 @@
 const fetch = require('node-fetch');
-const fs = require('fs').promises;
-const path = require('path');
+
+// Load .env file in local development
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 exports.handler = async function () {
   const apiKey = process.env.NEWSDATA_API_KEY;
+  console.log('API Key:', apiKey);
   const url = `https://newsdata.io/api/1/latest?apikey=${apiKey}&country=pt&language=pt`;
 
   try {
     const response = await fetch(url);
+    console.log('Response Status:', response.status);
     const data = await response.json();
+    console.log('API Response:', data);
 
     if (data.status !== 'success') {
+      console.log('API Error:', data.message);
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'Failed to fetch news' }),
+        body: JSON.stringify({ error: 'Failed to fetch news', message: data.message }),
       };
     }
 
@@ -29,19 +36,16 @@ exports.handler = async function () {
       })),
     };
 
-    // Write to public/news.json
-    const filePath = path.join(__dirname, '../../public/news.json');
-    await fs.writeFile(filePath, JSON.stringify(newsData, null, 2));
-
+    // Return the data directly without writing to file
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'News fetched and saved', count: news.length }),
+      body: JSON.stringify({ message: 'News fetched successfully', data: newsData }),
     };
   } catch (error) {
     console.error('Error:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Internal server error' }),
+      body: JSON.stringify({ error: 'Internal server error', details: error.message }),
     };
   }
 };

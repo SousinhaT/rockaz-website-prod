@@ -4,11 +4,24 @@
             <h2>Noticias<span id="special-colored-span">.</span></h2>
             <p>Descobre as <span id="special-colored-span">parcerias do canal</span> e as <span id="special-colored-span">vantagens exclusivas</span> que trazem para ti!<br>Fica atento para não perderes as <span id="special-colored-span">novidades</span> e <span id="special-colored-span">ofertas especiais!</span></p>
         </div>
+        <div class="faq-div">
+          <Panel :header="item.pubDate + ' | ' + item.title" toggleable v-for="item in articles">
+              <p class="m-0">
+                  {{item.description}}
+              </p>
+              <button @click="gotoNews(item.url)">Ver Noticia</button>
+          </Panel>
+        </div>
     </div>
+    
 </template>
 <script>
+import Panel from 'primevue/panel';
 
 export default {
+  components:{
+        Panel,
+    },
   data() {
     return {
       articles: [],
@@ -44,6 +57,9 @@ export default {
         console.log('Articles:', this.articles);
       }
     },
+    gotoNews(website){
+      window.open(website, '_blank');   
+    }
   },
 };
 </script>
