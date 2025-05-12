@@ -6,6 +6,7 @@ import Loja from './components/Loja.vue'
 import Minigames from './components/Minigames.vue';
 import Noticias from './components/Noticias.vue';
 import FAQ from './components/FAQ.vue'
+import Stream from './components/Stream.vue'
 
 const routes = [
   { path: '/', component: MainPageNew },
@@ -14,7 +15,8 @@ const routes = [
   { path: '/Loja', component: Loja }, // 👈 dynamic route
   { path: '/Minigames' , component:Minigames},
   { path: '/Noticias' , component:Noticias},
-  { path: '/FAQ', component: FAQ}
+  { path: '/FAQ', component: FAQ},
+  { path: '/Stream', component:Stream}
 ];
 
 export const router = createRouter({

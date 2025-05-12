@@ -9,7 +9,7 @@
             <h2>Notícias</h2>
           </div>
           <div class="card-news" v-for="article in articles">
-            <div class="data">Noticia <time>{{article.pubDate.split(' ')[0]}}</time></div>
+            <div class="data"> <time>{{article.pubDate.split(' ')[0]}}</time></div>
             <h2>{{article.title}}</h2>
             <div class="autor">
               <div class="img-container">
