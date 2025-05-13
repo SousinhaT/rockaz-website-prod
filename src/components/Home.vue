@@ -20,17 +20,17 @@
                     <h2> Junta-te A Nossa</h2>
                     <h2> <span>Comunidade</span>  </h2>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed orci sit amet augue dictum malesuada sed sit amet enim. Donec a bibendum tellus. </p>
-                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                    <button @click="gotoPage()"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="slider-image" style="background: url('https://i.imgur.com/589fG2X.png'); background-repeat: no-repeat; background-position: center; background-size: contain;">
                 </div>
             </swiper-slide>
-            <swiper-slide>
-                <div class="slider-text">
+            <swiper-slide style="height:500px; display:flex;">
+                 <div class="slider-text">
                     <h2> Junta-te A Nossa</h2>
                     <h2> <span>Comunidade</span>  </h2>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed orci sit amet augue dictum malesuada sed sit amet enim. Donec a bibendum tellus. </p>
-                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                    <button @click="gotoPage()"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="slider-image" style="background: url('https://i.imgur.com/589fG2X.png'); background-repeat: no-repeat; background-position: center; background-size: contain;">
                 </div>
@@ -104,6 +104,9 @@ export default {
     methods: {
         selectBrand(brand){
             this.selectedBrand = brand
+        },
+        gotoPage(){
+            this.$router.push({ path: `/Stream` });
         }
     },
     data() {
